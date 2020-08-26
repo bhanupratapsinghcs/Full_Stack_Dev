@@ -67,6 +67,7 @@
 
         #sb {
             float: right;
+            margin-right: 10px;
         }
 
         #chk {
@@ -129,12 +130,11 @@
         }
 
         .section-2 {
-            /* border: 2px solid red; */
+            border: 2px solid red;
             margin-top: 100px;
             margin-right: 10px;
             margin-left: 10px;
             margin-bottom: 150px;
-            /* clear: both; */
         }
 
         .section-2:after {
@@ -151,18 +151,16 @@
             float: left;
             font-size: 40px;
             color: white;
-            font-family: Arial, Helvetica, sans-serif;
             overflow: hidden;
         }
 
         .right-side {
+            /* border: 2px solid green; */
             width: 48%;
             height: 800px;
-            /* border: 2px solid green; */
             float: right;
             font-size: 40px;
             color: black;
-            font-family: Arial, Helvetica, sans-serif;
         }
 
         .articles {
@@ -171,15 +169,9 @@
             margin-bottom: 8px;
             font-weight: bold;
             text-align: center;
-            /* padding: 10px; */
-            /* background-color: rgb(219, 125, 71); */
             float: right;
-            /* display: flex;
-            justify-content: center;
-            align-items: center; */
             font-size: 50px;
             color: black;
-            font-family: Arial, Helvetica, sans-serif;
         }
 
         #a1 {
@@ -201,15 +193,18 @@
         }
 
         .section-3 {
-            text-align: center;
             display: block;
-            height: 600px;
-            margin-top: 15px;
-            /* background-color: lightcoral; */
-            /* margin: 10px; */
+            margin-top: 100px;
+            border: 2px solid red;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-content: center;
+        }
+
+        .section-3::after {
+            content: ' ';
+            display: block;
+            clear: both;
         }
 
         .rect {
@@ -256,23 +251,34 @@
 
         .footer {
             background-color: lightslategray;
-            height: 120px;
+            height: auto;
             margin: 10px;
             padding: 20px;
             text-align: center;
-            /* display: flex;
-            justify-content: center;
-            align-items: center; */
             font-size: 30px;
             color: white;
-            font-family: Arial, Helvetica, sans-serif;
         }
+
+        /* -----------1. First Break-point --------- */
+        /* 801px - 1199px */
 
         @media (min-width: 801px) and (max-width: 1150px) {
             body {
                 background-color: red;
             }
 
+            /* -----Banner ------- */
+            .banner {
+                background-image: url("Practical-8/emile-perron-xrVDYZRGdw4-unsplash.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 500px;
+                margin: 0 auto 10px auto;
+                font-size: 40px;
+                color: white;
+            }
+
+            /* ------ section 1 ------ */
             .section-1 {
                 border: 2px solid green;
                 width: 765px;
@@ -282,12 +288,42 @@
             .circle {
                 margin-left: 100px;
             }
+
+            /* ------ section 2 ---------- */
+            .section-3 {
+                height: auto;
+                width: 765px;
+                margin: 50px auto;
+                display: block;
+            }
+
+            .section-3::after {
+                display: block;
+                contain: ' ';
+                clear: both;
+            }
+
+            .rect {
+                float: left;
+                margin: 20px 35px;
+                background-color: white;
+                width: 35%;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+            }
+
         }
+
+        /* -----------2. Second Break-point --------- */
+        /* 801px - 1199px */
 
         @media (max-width: 800px) {
             body {
                 background-color: blue;
             }
+
+            /* ----- Navbar  -------- */
 
             #sb,
             #hb {
@@ -337,7 +373,21 @@
                 top: 5px;
             }
 
-            /* -----------section 1---------- */
+            /* ---- Banner ------ */
+            .banner {
+                background-image: url("Practical-8/emile-perron-xrVDYZRGdw4-unsplash.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 500px;
+                margin: 0 auto 10px auto;
+                color: white;
+            }
+
+            .banner h1 {
+                font-size: 20px;
+            }
+
+            /* ----------- section 1 ---------- */
             .section-1 {
                 border: 2px solid blue;
                 width: 360px;
@@ -349,30 +399,64 @@
                 margin-left: 70px;
             }
 
+            /* ----- section-2 --------- */
             .section-2 {
+                border: 2px solid red;
                 margin-top: 100px;
                 margin-right: 10px;
                 margin-left: 10px;
-                margin-bottom: 150px;
+                margin-bottom: 100px;
+            }
+
+            .section-2:after {
+                content: ' ';
+                display: block;
+                clear: both;
             }
 
 
             .left-side {
-                background-color: gray;
                 width: 100%;
-                height: 800px;
-                padding: 5px;
-                font-size: 40px;
+                margin-bottom: 10px;
+                background-color: gray;
+                /* border: 2px solid blue; */
+                height: 500px;
+                padding: 0;
+                font-size: 30px;
                 color: white;
-                font-family: Arial, Helvetica, sans-serif;
+                overflow: hidden;
             }
 
             .right-side {
-                height: 800px;
+                /* border: 2px solid green; */
                 width: 100%;
-                font-size: 40px;
+                height: 800px;
+                font-size: 30px;
                 color: black;
-                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            /* ------ section 2 ---------- */
+            .section-3 {
+                height: auto;
+                width: 365px;
+                margin: 50px auto;
+                display: block;
+            }
+
+            .section-3::after {
+                display: block;
+                contain: ' ';
+                clear: both;
+            }
+
+            .rect {
+                float: left;
+                /* margin: 20px 75px; */
+                background-color: white;
+                width: 80%;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
             }
         }
     </style>
@@ -398,7 +482,7 @@
     </div>
     <div class="container">
         <div class="banner">
-            <h1 style="font-size: 100px; margin: 10px;display: inline;">Practical-8</h1>
+            <h1 style="margin: 10px;display: inline;">Practical-8</h1>
         </div>
         <div id="teams" style="height: 100px;"></div>
         <div style="margin-top: 10px; text-align: center;">
@@ -432,7 +516,7 @@
         </div>
         <div id="tc" style="height: 100px;"></div>
         <div style="margin: 10px; text-align: center;">
-            <span style="font-size: 60px;color: black; font-weight: bold;">Technologies Used</span>
+            <span style="font-size: 50px;color: black; font-weight: bold;">Technologies Used</span>
         </div>
         <div class="section-3">
             <div class="rect">
@@ -483,8 +567,8 @@
             <span style="font-size: 60px;color: black; font-weight: bold;">Contact</span>
         </div>
         <div class="footer">
-            Website Template for Practical-8 &copy; <a
-                href="https://github.com/bhanupratapsinghcs/Full_Stack_Dev">GitHub/bhanupratapsinghcs</a>
+            <p>Website Template for Practical-8 &copy; <a
+                    href="https://github.com/bhanupratapsinghcs/Full_Stack_Dev">GitHub/bhanupratapsinghcs</a></p>
             <br>
             <br>
             <a href="#home">Back To Top</a>
