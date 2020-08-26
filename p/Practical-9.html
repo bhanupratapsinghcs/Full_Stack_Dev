@@ -473,10 +473,49 @@
                 padding: 2px;
                 font-size: 20px;
             }
+
         }
 
         /* -----------3. Third Break-point --------- */
         /* 0 - 349 */
+        @media (max-width: 355px) {
+
+            /* ----------- section 1 ---------- */
+            .section-1 {
+                /* border: 2px solid blue; */
+                width: 100%;
+                display: block;
+                margin: auto;
+            }
+
+            .circle {
+                margin-left: 0;
+            }
+
+            /* ------ section 2 ---------- */
+            .section-3 {
+                height: auto;
+                width: 100%;
+                margin: 50px auto;
+                display: block;
+            }
+
+            .section-3::after {
+                display: block;
+                contain: ' ';
+                clear: both;
+            }
+
+            .rect {
+                float: left;
+                /* margin: 20px 75px; */
+                background-color: white;
+                width: 80%;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+            }
+        }
     </style>
 </head>
 
