@@ -130,7 +130,7 @@
         }
 
         .section-2 {
-            border: 2px solid red;
+            /* border: 2px solid red; */
             margin-top: 100px;
             margin-right: 10px;
             margin-left: 10px;
@@ -195,7 +195,7 @@
         .section-3 {
             display: block;
             margin-top: 100px;
-            border: 2px solid red;
+            /* border: 2px solid red; */
             display: flex;
             justify-content: center;
             align-content: center;
@@ -263,9 +263,9 @@
         /* 801px - 1199px */
 
         @media (min-width: 801px) and (max-width: 1150px) {
-            body {
+            /* body {
                 background-color: red;
-            }
+            } */
 
             /* -----Banner ------- */
             .banner {
@@ -280,7 +280,7 @@
 
             /* ------ section 1 ------ */
             .section-1 {
-                border: 2px solid green;
+                /* border: 2px solid green; */
                 width: 765px;
                 margin: 15px auto;
             }
@@ -316,11 +316,20 @@
         }
 
         /* -----------2. Second Break-point --------- */
-        /* 801px - 1199px */
+        /* 350px - 801pxx */
 
         @media (max-width: 800px) {
-            body {
+            /* body {
                 background-color: blue;
+            } */
+
+            .container {
+                width: 100%;
+                border: none;
+            }
+
+            .header {
+                width: 100%;
             }
 
             /* ----- Navbar  -------- */
@@ -389,7 +398,7 @@
 
             /* ----------- section 1 ---------- */
             .section-1 {
-                border: 2px solid blue;
+                /* border: 2px solid blue; */
                 width: 360px;
                 display: block;
                 margin: 15px auto;
@@ -401,7 +410,7 @@
 
             /* ----- section-2 --------- */
             .section-2 {
-                border: 2px solid red;
+                /* border: 2px solid red; */
                 margin-top: 100px;
                 margin-right: 10px;
                 margin-left: 10px;
@@ -458,7 +467,16 @@
                 border-radius: 10px;
                 box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
             }
+
+            .footer {
+                margin: 5px;
+                padding: 2px;
+                font-size: 20px;
+            }
         }
+
+        /* -----------3. Third Break-point --------- */
+        /* 0 - 349 */
     </style>
 </head>
 
