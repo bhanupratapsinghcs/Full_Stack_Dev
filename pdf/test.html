@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            background-color: red;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            width: 100%;
+            padding: 0 20px;
+            background-color: #737323;
+            height: 50px;
+        }
+
+        .header h1 {
+            line-height: 50px;
+            float: left;
+            color: #fff;
+        }
+
+        ul {
+            list-style: none;
+            float: right;
+        }
+
+        ul li {
+            display: inline-block;
+            line-height: 50px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            padding: 20px;
+            color: #fff;
+        }
+
+        #sb,
+        #hb {
+            color: #fff;
+            font-size: 40px;
+            line-height: 50px;
+            display: none;
+        }
+
+        #sb:hover,
+        #hb:hover,
+        ul li a:hover {
+            color: #123455;
+        }
+
+        #sb {
+            float: right;
+        }
+
+        #chk {
+            position: absolute;
+            visibility: hidden;
+            z-index: -10;
+        }
+
+        @media (max-width: 1200px) {
+            body {
+                background-color: green;
+            }
+        }
+
+        @media (max-width: 650px) {
+            body {
+                background-color: pink;
+            }
+
+            #sb,
+            #hb {
+                display: block;
+            }
+
+            ul {
+                position: fixed;
+                padding: 50px 0;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                min-height: 100vh;
+                color: black;
+                background-color: #454335;
+                text-align: center;
+                transition: .5s;
+                display: block;
+
+            }
+
+            #chk:checked~ul {
+                right: 0;
+                background-color: red;
+
+            }
+
+            .header ul li {
+                display: block;
+                line-height: normal;
+            }
+
+            ul li a {
+                display: block;
+                width: 100%;
+            }
+
+            ul li a:hover {
+                color: #123455;
+                background-color: #fff;
+            }
+
+            #hb {
+                position: absolute;
+                right: 20px;
+                top: 5px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>Document</h1>
+        <input type="checkbox" id="chk">
+        <label for="chk" id="sb">
+            <i class="fa fa-bars"></i>
+        </label>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">login</a></li>
+            <li><a href="">signup</a></li>
+            <label for="chk" id="hb">
+                <i class="fa fa-times"></i>
+            </label>
+        </ul>
+    </div>
+
+</body>
+
+</html>
