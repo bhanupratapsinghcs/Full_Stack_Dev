@@ -38,9 +38,11 @@
         .form-template1 {
             margin-top: 50px;
             width: 350px;
-            height: 350px;
+            height: 400px;
             background-color: #fff;
             margin-left: 50px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
         }
 
         .form-header-t1 {
@@ -51,6 +53,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin-bottom: 30px;
         }
 
         .form-header-t1 h2 {
@@ -75,6 +78,7 @@
             border-bottom: 1px solid gray;
             padding: 10px 0px;
             width: 100%;
+            margin-bottom: 10px;
         }
 
         input[type='password'] {
@@ -99,7 +103,7 @@
         input[type='submit'] {
             outline: none;
             border: none;
-            padding: 10px 0px;
+            font-size: 12px;
             color: #fff;
             border-radius: 20px;
             background-color: gray;
@@ -112,26 +116,37 @@
             margin-left: 20px;
         }
 
-        /* Template 2 */
+
+
+
+
+
+        /*---------------- Template 2 ---------------------*/
+
+
+
+
+
         .form-template2 {
             margin-top: 50px;
             width: 350px;
-            height: 350px;
+            height: 400px;
             background-color: #fff;
             margin-left: 50px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
         }
 
         .form-header-t2 {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
         }
 
         .form-header-t2 h2 {
             color: deeppink;
             font-size: 20px;
-            padding: 10px 0px;
+            padding: 20px 0px;
         }
 
 
@@ -140,25 +155,10 @@
             padding: 20px;
         }
 
-        input[type='email'] {
-            outline: none;
-            border: none;
-            border-bottom: 1px solid gray;
-            padding: 10px 0px;
-            width: 100%;
-        }
-
         input[type='checkbox'] {
             margin: 20px 10px;
         }
 
-        input[type='password'] {
-            outline: none;
-            border: none;
-            border-bottom: 1px solid gray;
-            padding: 10px 0px;
-            width: 100%;
-        }
 
         .form-container-t2 p {
             display: inline-block;
@@ -175,13 +175,13 @@
         .form-container-t2 input[type='submit'] {
             outline: none;
             border: none;
-            padding: 10px 0px;
             color: #fff;
+            font-size: 12px;
             border-radius: 20px;
             background-color: deeppink;
-            padding: 10px 20px;
+            padding: 10px 25px;
             margin-right: 20px;
-            margin-top: 15px;
+            margin-top: 35px;
         }
 
         .form-footer-t2 {
@@ -200,13 +200,28 @@
             padding: 20px 10px;
         }
 
-        /* Template 3 */
+
+
+
+
+
+
+        /*--------------- Template 3 -----------------------*/
+
+
+
+
+
+
+
         .form-template3 {
             margin-top: 50px;
             width: 350px;
-            height: 350px;
+            height: 400px;
             background-color: #fff;
             margin-left: 50px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
         }
 
         .form-header-t3 {
@@ -217,36 +232,17 @@
         }
 
         .form-header-t3 h2 {
-            color: deeppink;
+            color: #000;
             font-size: 20px;
-            padding: 10px 0px;
+            padding: 20px 0px;
         }
 
 
 
         .form-container-t3 {
-            padding: 20px;
+            padding: 25px;
         }
 
-        input[type='email'] {
-            outline: none;
-            border: none;
-            border-bottom: 1px solid gray;
-            padding: 10px 0px;
-            width: 100%;
-        }
-
-        input[type='checkbox'] {
-            margin: 20px 10px;
-        }
-
-        input[type='password'] {
-            outline: none;
-            border: none;
-            border-bottom: 1px solid gray;
-            padding: 10px 0px;
-            width: 100%;
-        }
 
         .form-container-t3 p {
             font-size: 12px;
@@ -262,19 +258,28 @@
         .form-container-t3 input[type='submit'] {
             outline: none;
             border: none;
-            padding: 10px 0px;
+            display: block;
+            width: 100%;
             background: linear-gradient(to right, skyblue, blue);
             border-radius: 20px;
-            background-color: deeppink;
             padding: 10px 125px;
-            margin-right: 20px;
-            margin-top: 15px;
+            margin-top: 20px;
+        }
+
+        .form-container-t3 .pt3 {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .form-container-t3 .pt3 b {
+
+            color: #000;
         }
 
         .form-footer-t3 {
-            width: 100%;
-            height: 80px;
-            background-color: #919fba;
+            /* width: 100%;
+            height: 80px; */
+            /* background-color: #919fba; */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -282,9 +287,13 @@
         }
 
         .form-footer-t3 .social i {
-            color: #fff;
+            color: rgba(50, 46, 252, 0.952);
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 255, 0.452);
             font-size: 20px;
-            padding: 20px 10px;
+            padding: 10px 25px;
+            margin: 5px;
         }
     </style>
 </head>
@@ -316,7 +325,11 @@
                 <p class="pt1">Don't have account? <b>Sign Up</b></p>
             </div>
         </div>
+
+
         <!-- form template 2 -->
+
+
         <div class="form-template2">
             <div class="form-header-t2">
                 <h2>Sign up</h2>
@@ -344,7 +357,11 @@
             </div>
 
         </div>
+
+
         <!-- Form Template 3 -->
+
+
         <div class="form-template3">
             <div class="form-header-t3">
                 <h2>Sign in</h2>
@@ -356,8 +373,8 @@
                 <div>
                     <input type="password" name="password" id="password" placeholder="Your Password" />
                 </div>
-                <p>Forget <b>Password?</b></p>
-                <input type="submit" value="LOGIN">
+                <p> <b>Forget Password?</b></p>
+                <input type="submit" value="SIGN IN">
                 <p class="pt3"><b> or Sign in with </b></p>
 
             </div>
