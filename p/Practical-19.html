@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Multi-step Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: grey;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 360px;
+            height: 450px;
+            background-color: white;
+            position: relative;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .container form {
+            position: absolute;
+            left: 40px;
+            top: 80px;
+            width: 260px;
+            transition: 0.5s;
+        }
+
+        form h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 20px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px 5px;
+            margin: 10px 0px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid gray;
+            background: transparent;
+        }
+
+        .btn-box {
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        form button {
+            width: 100px;
+            height: 35px;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+        }
+
+        #form2 {
+            left: 450px;
+
+        }
+
+        #form3 {
+            left: 450px;
+
+        }
+
+        .step-row {
+            position: relative;
+            width: 360px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0px -1px 5px -1px black;
+        }
+
+        .step-col {
+            width: 120px;
+            text-align: center;
+            position: relative;
+            font-weight: 700;
+        }
+
+        #progress {
+            width: 120px;
+            height: 100%;
+            background-color: red;
+            position: absolute;
+            transition: 0.5s;
+        }
+
+        #progress::after {
+            content: '';
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            right: -20px;
+            top: 0;
+            border-left: 20px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form id="form1">
+            <h3>Create Account</h3>
+            <input type="text" placeholder="Enter Email">
+            <input type="password" placeholder="Enter Password">
+            <input type="password" placeholder="Confirm Password">
+            <div class="btn-box">
+                <button type="button" id="next1">Next</button>
+            </div>
+        </form>
+
+        <form id="form2">
+            <h3>SOCIAL LINKS</h3>
+            <input type="text" placeholder="Mediam">
+            <input type="text" placeholder="Github">
+            <input type="text" placeholder="Linkedin">
+            <div class="btn-box">
+                <button type="button" id="back1">Back</button>
+                <button type="button" id="next2">Next</button>
+            </div>
+        </form>
+
+        <form id="form3">
+            <h3>PERSONAL INFORMATION</h3>
+            <input type="text" placeholder="FIrst Name">
+            <input type="text" placeholder="Last Name">
+            <input type="number" placeholder="Mobile Number">
+            <div class="btn-box">
+                <button type="button" id="back2">Back</button>
+                <button type="button">Submit</button>
+
+            </div>
+        </form>
+
+        <div class="step-row">
+            <div id="progress"></div>
+            <div class="step-col"><small>Step-1</small></div>
+            <div class="step-col"><small>Step-2</small></div>
+            <div class="step-col"><small>Step-3</small></div>
+        </div>
+    </div>
+    <script>
+        const form1 = document.getElementById("form1");
+        const form2 = document.getElementById("form2");
+        const form3 = document.getElementById("form3");
+
+        const next1 = document.getElementById("next1");
+        const next2 = document.getElementById("next2");
+        const back1 = document.getElementById("back1");
+        const back2 = document.getElementById("back2");
+
+        const progress = document.getElementById("progress");
+
+        next1.onclick = function () {
+            form1.style.left = "-450px";
+            form2.style.left = "40px";
+            progress.style.width = "240px"
+        };
+        back1.onclick = function () {
+            form1.style.left = "40px";
+            form2.style.left = "450px";
+            progress.style.width = "120px"
+        }
+        next2.onclick = function () {
+            form2.style.left = "-450px";
+            form3.style.left = "40px";
+            progress.style.width = "360px"
+        };
+        back2.onclick = function () {
+            form2.style.left = "40px";
+            form3.style.left = "450px";
+            progress.style.width = "240px"
+        }
+    </script>
+</body>
